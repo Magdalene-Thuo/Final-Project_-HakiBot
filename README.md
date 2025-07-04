@@ -1,2 +1,113 @@
-# Final-Project_-HakiBot
-HakiBot is a lightweight AI chatbot that provides instant, reliable answers to common legal questions based on Kenyan labour laws and constitutional rights. Built using Python, FAISS, and sentence-transformers, it helps users understand their rights around employment, arrest, and police conduct — for free, and in plain language.
+# ⚖️ HakiBot – AI-Powered Legal Assistant for Kenya
+
+**HakiBot** is an intelligent question-answering system that helps Kenyan citizens access quick and accurate legal information. It focuses on **labour rights** and **police conduct**, providing answers derived from the Kenyan Constitution and relevant laws. This tool is designed for awareness, empowerment, and civic education.
+
+---
+
+## 📌 Features
+
+- ✅ 100+ curated legal Q&A based on Kenyan law
+- 🤖 AI-powered similarity search using Sentence Transformers & FAISS
+- 🧠 Understands user questions and returns the most relevant answer
+- 🆓 Built entirely with free, open-source tools
+- 🌐 Future-ready for chatbot/Streamlit integration
+
+---
+
+## 🔧 Tech Stack
+
+| Component | Description |
+|----------|-------------|
+| `Python` | Core language |
+| `Pandas` | Data loading and processing |
+| `SentenceTransformers` | Embeds legal questions into vector space |
+| `FAISS` | Fast, scalable similarity search |
+| `Streamlit` *(optional)* | For chatbot web interface (Step 4) |
+
+---
+
+## 🚀 How It Works
+
+1. Legal Q&A pairs are loaded from `legal_qa.csv`
+2. Questions are converted to vector embeddings
+3. A FAISS index is built from the embeddings
+4. When a user asks a question, the system:
+   - Encodes the input
+   - Finds the most similar stored question
+   - Returns the corresponding answer
+
+---
+
+## 📁 Project Structure
+
+hakibot/
+├── legal_qa.csv # Dataset with 100 Q&A entries
+├── backend.py # Main script: builds index and answers questions
+├── legal_index.index # Saved FAISS index
+├── legal_df.pkl # Serialized DataFrame
+└── README.md # You're reading it!
+
+
+---
+
+## 🧪 Usage
+
+1. Clone the repo
+
+```bash
+git clone https://github.com/yourusername/hakibot.git
+cd hakibot
+Install required packages
+
+bash
+
+pip install faiss-cpu pandas sentence-transformers
+Run the backend script
+
+
+python backend.py
+Ask a question!
+
+
+Ask your question: Can I be fired without notice?
+Answer: Under Section 35 of the Employment Act...
+🌍 Target Users
+Kenyan citizens seeking legal awareness
+
+Community-based organizations
+
+Law students and educators
+
+Civic tech enthusiasts
+
+✅ Future Improvements
+🗨️ Add Streamlit-based chatbot interface
+
+🌐 Integrate with WhatsApp/SMS bots
+
+🏛️ Expand to cover land law, family law, and business law
+
+🗂️ Enable multilingual support (e.g., Kiswahili)
+
+🙏 Acknowledgements
+Kenyan Constitution (2010)
+
+Employment Act (2007)
+
+Independent Policing Oversight Authority (IPOA)
+
+Sentence Transformers (by UKP Lab)
+
+FAISS (by Facebook AI Research)
+
+📜 Disclaimer
+HakiBot provides general legal information — not legal advice. For specific legal matters, please consult a qualified lawyer or legal aid organization.
+
+🧑‍💻 Author
+Magdalene Thuo
+Digital Trainer | AI for Software Engineering
+
+LinkedIn | Portfolio | Email
+
+
+
